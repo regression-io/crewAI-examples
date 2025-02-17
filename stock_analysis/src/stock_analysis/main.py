@@ -4,7 +4,7 @@ from crew import StockAnalysisCrew
 def run():
     inputs = {
         'query': 'What is the company you want to analyze?',
-        'company_stock': 'AMZN',
+        'company_stock': 'NVDA',
     }
     return StockAnalysisCrew().crew().kickoff(inputs=inputs)
 

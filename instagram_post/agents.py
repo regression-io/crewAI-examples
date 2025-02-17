@@ -9,7 +9,8 @@ from langchain.llms import Ollama
 
 class MarketingAnalysisAgents:
 	def __init__(self):
-		self.llm = Ollama(model=os.environ['MODEL'])
+		# self.llm = Ollama(model=os.environ['MODEL'])
+		self.llm = Ollama(model='deepseek-r1-distill-qwen-14b-q8_0:latest')
 
 	def product_competitor_agent(self):
 		return Agent(
@@ -94,7 +95,7 @@ class MarketingAnalysisAgents:
 				verbose=True
 		)
 
-	def chief_creative_diretor_agent(self):
+	def chief_creative_director_agent(self):
 		return Agent(
 				role="Chief Creative Director",
 				goal=dedent("""\

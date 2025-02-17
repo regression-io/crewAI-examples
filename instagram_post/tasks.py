@@ -3,7 +3,7 @@ from textwrap import dedent
 
 class MarketingAnalysisTasks:
 	def product_analysis(self, agent, product_website, product_details):
-		return Task(description=dedent(f"""\
+		return Task(input={"description": dedent(f"""\
 			Analyze the given product website: {product_website}.
 			Extra details provided by the customer: {product_details}.
 
@@ -18,7 +18,8 @@ class MarketingAnalysisTasks:
 			Keep in mind, attention to detail is crucial for
 			a comprehensive analysis. It's currenlty 2024.
 			"""),
-			agent=agent
+			"agent": agent
+		}
 		)
 
 	def competitor_analysis(self, agent, product_website, product_details):
